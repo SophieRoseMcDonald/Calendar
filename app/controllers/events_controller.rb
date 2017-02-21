@@ -13,6 +13,7 @@ class EventsController < ApplicationController
   end
 
   def index
+    @day = Date.today
   end
 
   def show
