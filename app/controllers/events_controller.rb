@@ -4,11 +4,22 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.create(event_params)
+    @event = Event.new(event_params)
     if @event.save
       redirect_to root_path
     else
       render :new
     end
+  end
+
+  def index
+  end
+
+  def show
+  end
+
+  private
+  def event_params
+    params.require(:event).permit(:name, :date_and_time, :location)
   end
 end
