@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1> Day : <%= @day.strftime("%A %d %b %y")-%> </h1>
-    <table>
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="index.scss">
   <title></title>
 </head>
+<body>
+  <h1> Day : <%= @day.strftime("%A %d %b %y")-%> </h1>
+  <table>
+    <thead>
       <tr>
-        <th> Time </th>
-        <th> Event </th>
+        <th>Time</th>
+        <th>Event</th>
+        <th>Location</th>
       </tr>
+    </thead>
+    <tbody>
+    <% @events.each do |event| %>
 
-    </table>
-  </body>
+      <tr>
+        <td> <%=event.date_and_time%> </td>
+        <td> <%= event.name %> </td>
+        <td> <%= event.location %> </td>
+        <%end%>
+      </tr>
+    </tbody>
+  </table>
+</body>
 </html>

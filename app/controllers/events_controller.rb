@@ -13,7 +13,10 @@ class EventsController < ApplicationController
   end
 
   def index
-    @day = Date.today
+    @day = DateTime.now
+    start_of_day = @day.midnight
+    end_of_day = (@day + 1.day).midnight - 1
+    @events = Event.where(date_and_time: start_of_day..end_of_day)
   end
 
   def show
