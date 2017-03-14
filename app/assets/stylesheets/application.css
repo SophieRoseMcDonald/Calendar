@@ -1,20 +1,28 @@
-.vertical-menu {
-    width: 200px; /* Set a width if you like */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
 }
 
-.vertical-menu a {
-    background-color: #eee;
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: pink;
     color: black;
-    display: block; /* Make the links appear below each other */
-    padding: 12px;
-    text-decoration: none; /* Remove underline from links */
 }
 
-.vertical-menu a:hover {
-    background-color: #ccc; /* Dark grey background on mouse-over */
-}
-
-.vertical-menu a.active {
-    background-color: pink; /* Add a green color to the "active/current" link */
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: blue;
     color: white;
 }
