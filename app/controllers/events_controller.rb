@@ -16,7 +16,7 @@ class EventsController < ApplicationController
     @day = Time.zone.now
     start_of_day = @day.at_beginning_of_day
     end_of_day = @day.at_end_of_day
-    @events = Event.where(date_and_time: start_of_day..end_of_day) 
+    @events = Event.where(date_and_time: start_of_day..end_of_day)
   end
 
   def show

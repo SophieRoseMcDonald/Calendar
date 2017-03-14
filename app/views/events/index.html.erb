@@ -20,13 +20,13 @@
         <td><% @events.each do |event| %>
           <ul>  <%= event.name %></ul>
           <% end %></td>
-          <td> <% @events.each do |event| %>
-            <ul>  <%= event.date_and_time %> </ul>
-            <%end %>
-            <td> <% @events.each do |event| %>
-              <ul>  <%= event.location %> </ul>
-              <%end %>
-          </tr>
+        <td> <% @events.each do |event| %>
+          <ul>  <%= event.date_and_time %> </ul>
+          <%end %>
+        <td> <% @events.each do |event| %>
+          <ul>  <%= event.location %> </ul>
+          <%end %>
+        </tr>
         </thead>
         <tbody>
 
