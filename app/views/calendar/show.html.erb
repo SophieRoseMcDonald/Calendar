@@ -18,8 +18,8 @@
   <div class="col-md-12">
     <%= calendar @date do |date| %>
     <%= date.day %>
-    <% if @events_by_date %>
-    <% @events_by_date.each do |event| %>
+    <% if @events %>
+    <% @events.each do |event| %>
     <%= link_to event.name, event %></li>
     <% end %>
   </ul>

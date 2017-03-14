@@ -4,6 +4,6 @@ class CalendarController < ApplicationController
   end
 
   def index
-  @events_by_date = Event.group_by(&:date)
+  @events = Event.group_by(&:date)
   end
 end
