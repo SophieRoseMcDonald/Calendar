@@ -9,16 +9,16 @@
   <h1> Day : <%= @day.strftime("%A %d %b %y")-%> </h1>
   <h2> <%= link_to "Home", calendar_path, class: "btn btn-default" %> </h2>
   <h2> <%= link_to "Add Event", new_event_path, class: "btn btn-default" %> </h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Event</th>
-          <th>Location</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @events.each do |event| %>
-        <%= event.name %>
-        <% end %>
-        </html>
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Event</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @events.each do |event| %>
+      <%= event.name %>
+      <% end %>
+      </html>
