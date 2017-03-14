@@ -15,8 +15,7 @@
     <a href="/events">Today</a>
     <a href="/events/new">Add Event</a>
     <a href="/">Other</a>
-  </div>
-    <p class="navbar-text pull-right">
+    <class="Login">
       <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -26,6 +25,7 @@
       <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
       <ul class="nav">
+      </div>
         <!-- <li class="active"><a href="/event">Event</a></li> -->
         <div class="container">
           <% if notice %>
@@ -36,7 +36,6 @@
           <% end %>
           <%= yield %>
         </div>
-        </div/
     </ul>
   </body>
   </html>

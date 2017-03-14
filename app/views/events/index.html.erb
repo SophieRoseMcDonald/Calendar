@@ -12,13 +12,16 @@
   <table>
     <thead>
       <tr>
-        <th>Time</th>
         <th>Event</th>
+        <th>Time</th>
         <th>Location</th>
       </tr>
-    </thead>
-    <tbody>
-      <% @events.each do |event| %>
-      <%= event.name %>
-      <% end %>
-      </html>
+      <tr>
+        <td><% @events.each do |event| %>
+        <ul>  <%= event.name %></ul>
+          <% end %></td>
+        </tr>
+      </thead>
+      <tbody>
+
+        </html>
