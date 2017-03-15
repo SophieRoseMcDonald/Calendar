@@ -20,6 +20,7 @@ class EventsController < ApplicationController
   end
 
   def show
+  #@events = Events.find(params[:id])
   end
 
   private
