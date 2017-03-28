@@ -4,8 +4,8 @@ class EventsController < ApplicationController
   end
 
   def create
-    @events = Event.new(event_params)
-    @events.save
+    @events = Event.new(params [:event])
+   if @events.save
       redirect_to root_path
     else
       render :new
@@ -20,10 +20,11 @@ class EventsController < ApplicationController
   end
 
   def show
-    # @events = Event.where(date_and_time: @day..@day.at_end_of_day)
+   @events = Event.where(date_and_time: @day..@day.at_end_of_day)
   end
 
   private
   def event_params
-    params.require(:event).permit(:name, :date_and_time, :location, :id)
+    params.require(:event).permit(:name, :date_and_time, :location)
   end
+end
