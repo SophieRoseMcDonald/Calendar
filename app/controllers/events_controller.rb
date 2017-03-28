@@ -20,7 +20,10 @@ class EventsController < ApplicationController
   end
 
   def show
-   @events = Event.where(date_and_time: @day..@day.at_end_of_day)
+    @day = Time.zone.parse(params[:id])
+    start_of_day = @day.at_beginning_of_day
+    end_of_day = @day.at_end_of_day
+   @events = Event.where(date_and_time: start_of_day..end_of_day)
   end
 
   private
