@@ -7,21 +7,25 @@
 </head>
 <body>
    <h1> Day : <%= @day.strftime("%A %d %b %y")%> </h1>
-  <h2> <%= link_to "Home", calendar_path, class: "btn btn-default" %> </h2>
-  <h2> <%= link_to "Add Event", new_event_path, class: "btn btn-default" %> </h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Event</th>
-        <th>Time</th>
-        <th>Location</th>
-      </tr>
-      <tr>
-        <td><% @events.each do |event| %>
-          <ul>  <%= event.name %> </ul>
-          <ul>  <%= event.date_and_time %> </ul>
-          <ul>  <%= event.location %> </ul>
-          <%end %>
-        </tr>
-    </thead>
+   <table>
+     <thead>
+       <tr>
+         <th>Event</th>
+         <th>Time</th>
+         <th>Location</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>
+             <% @events.each do |event| %>
+             <tr>
+             <td>  <%= event.name %> </td>
+             <td>  <%= event.date_and_time.strftime("%l : %M %P") %> </td>
+             <td>  <%= event.location %> </td>
+             <%end %>
+           </td>
+       </tr>
+     </tbody>
+   </table>
   </html>
