@@ -19,10 +19,11 @@
     <tbody>
       <tr>
         <td>
-          <td><% @events.each do |event| %>
-            <ul>  <%= event.name %> </ul>
-            <ul>  <%= event.date_and_time %> </ul>
-            <ul>  <%= event.location %> </ul>
+            <% @events.each do |event| %>
+            <tr>
+            <td>  <%= event.name %> </td>
+            <td>  <%= event.date_and_time.strftime("%l : %M %P") %> </td>
+            <td>  <%= event.location %> </td>
             <%end %>
           </td>
       </tr>
