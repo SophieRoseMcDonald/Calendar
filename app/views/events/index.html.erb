@@ -6,26 +6,26 @@
   <title></title>
 </head>
 <body>
-   <h1> Day : <%= @day.strftime("%A %d %b %y")%> </h1>
-   <table>
-     <thead>
-       <tr>
-         <th>Event</th>
-         <th>Time</th>
-         <th>Location</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>
-             <% @events.each do |event| %>
-             <tr>
-             <td>  <%= event.name %> </td>
-             <td>  <%= event.date_and_time.strftime("%l : %M %P") %> </td>
-             <td>  <%= event.location %> </td>
-             <%end %>
-           </td>
-       </tr>
-     </tbody>
-   </table>
+  <h1> Day : <%= @day.strftime("%B %e, %Y")%> </h1>
+    <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Event</th>
+        <th>Time</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+            <% @events.each do |event| %>
+            <tr>
+            <td>  <%= event.name %> </td>
+            <td>  <%= event.date_and_time.strftime("%l : %M %P") %> </td>
+            <td>  <%= event.location %> </td>
+            <%end %>
+          </td>
+      </tr>
+    </tbody>
+  </table>
   </html>
