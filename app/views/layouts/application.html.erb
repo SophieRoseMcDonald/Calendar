@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Calendar</title>
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag "http://yandex.st/bootstrap/3.0.2/css/bootstrap.min.css", media: "all" %>
@@ -15,7 +16,7 @@
     <a href="/events">Today</a>
     <a href="/events/new">Add Event</a>
     <a href="/">Other</a>
-    <class="Login">
+    <div class="Login">
       <% if user_signed_in? %>
       Logged in as <strong><%= current_user.email %></strong>.
       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -26,6 +27,8 @@
       <% end %>
       <ul class="nav">
       </div>
+    </div>
+
         <!-- <li class="active"><a href="/event">Event</a></li> -->
         <div class="container">
           <% if notice %>
@@ -36,6 +39,7 @@
           <% end %>
           <%= yield %>
         </div>
+
     </ul>
   </body>
   </html>
