@@ -1,4 +1,8 @@
 /* Add a black background color to the top navigation */
+*{
+  font-family: 'Lobster', cursive
+}
+
 .topnav {
     background-color: #333;
     overflow: hidden;
@@ -24,7 +28,7 @@
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: blue;
+    background-color: pik;
     color: white;
 }
 
@@ -33,4 +37,54 @@
   text-align: right;
   color: Orange;
 
+}
+
+.container {
+  background-color: #333;
+color: orange;
+font-family: 'Lobster', cursive;
+}
+body{
+  border-color: #333;
+}
+h1 {
+font-family: 'Lobster', cursive;
+
+}
+
+.well.controls {
+background-color: #333;
+}
+
+div.row {
+background-color: #333;
+}
+
+a.btn.btn-default {
+background-color: #333;
+color: orange;
+}
+
+i.glyphicon.glyphicon-backward {
+color: grey;
+}
+
+i.glyphicon.glyphicon-forward {
+color: grey;
+}
+th {
+color: orange;
+}
+
+td {
+background-color: grey;
+
+}
+
+td.not-month {
+
+}
+
+div.col-md-12 {
+color: pink;
 }
