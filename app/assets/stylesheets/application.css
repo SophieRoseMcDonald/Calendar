@@ -1,6 +1,7 @@
 /* Add a black background color to the top navigation */
 *{
   font-family: 'Lobster', cursive
+
 }
 
 .topnav {
@@ -27,31 +28,41 @@
 }
 
 /* Add a color to the active/current link */
-.topnav a.active {
-    background-color: pik;
+/*.topnav a.active {
+    background-color: orange;
     color: white;
-}
+}*/
 
 .Login a {
   float: right;
-  text-align: right;
+  text-align: center;
   color: Orange;
 
 }
+strong {
+  color: orange;
+  font-family: serif;
+  float: right;
+}
 
 .container {
-  background-color: #333;
+background-color: #333;
 color: orange;
 font-family: 'Lobster', cursive;
+font-size: 20px;
 }
-body{
-  border-color: #333;
+#daleytasks {
+  font-size: 40px;
+  font-family: 'Lobster', cursive;
+  text-align: center;
 }
-main h1 {
-font-family: 'Lobster', cursive;
 
+#dateyear{
+  color: orange;
+  font-family: 'Lobster', cursive;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
 .well.controls {
 background-color: #333;
 }
@@ -61,30 +72,33 @@ background-color: #333;
 }
 
 a.btn.btn-default {
-background-color: #333;
+background-color: white;
 color: orange;
 }
 
 i.glyphicon.glyphicon-backward {
-color: grey;
-}
-
-i.glyphicon.glyphicon-forward {
-color: grey;
-}
-th {
 color: orange;
 }
 
-td {
-background-color: grey;
+i.glyphicon.glyphicon-forward {
+color: orange;
+}
+th {
+color: Orange;
+
 
 }
 
-td.not-month {
+td {
+background-color: #e0dfde;
 
 }
 
 div.col-md-12 {
-color: pink;
+color: Black;
+font-size: 20px;
+}
+
+a{
+  background-color: black;
 }

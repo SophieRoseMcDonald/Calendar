@@ -9,16 +9,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>
-            <% @events.each do |event| %>
+          <% @events.each do |event| %>
             <tr>
-            <td>  <%= event.name %> </td>
-            <td>  <%= event.date_and_time.strftime("%l : %M %P") %> </td>
-            <td>  <%= event.location %> </td>
-            <%end %>
-          </td>
-      </tr>
+              <td>  <%= event.name %> </td>
+              <td>  <%= event.date_and_time.strftime("%l : %M %P") %> </td>
+              <td>  <%= event.location %> </td>
+            </tr>
+          <%end %>
     </tbody>
   </table>
 </div>
