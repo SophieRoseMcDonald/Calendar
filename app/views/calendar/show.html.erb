@@ -19,13 +19,13 @@
     <div class= "calendar", id="cal">
       <%= calendar @date do |date| %>
         <%= link_to date.day, "#{events_path}/#{date}" %>
-        <% if @events %>
           <div class = "highlight" id="datehighlight">
-            <ul id= "daylight">
-              <% @events.each do |event| %>
-                <li><%= event.name %> </li>
-              <% end %>
-            </ul>
+              test
+              test1
+              <% if @events %>
+                <% @events.each do |event| %>
+                  <li><%= event.name %> </li>
+                <% end %>
           </div>
           # highlight code here, helper method?
         <% end %>
