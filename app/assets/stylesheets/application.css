@@ -1,7 +1,6 @@
 /* Add a black background color to the top navigation */
 *{
-  font-family: 'Lobster', cursive
-
+  font-family: arial,serif;
 }
 
 .topnav {
@@ -17,7 +16,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-family: 'Lobster', cursive;
+    font-family: Arial, serif;
     font-size: 17px;
 }
 
@@ -48,7 +47,6 @@ strong {
 .container {
 background-color: #333;
 color: orange;
-font-family: 'Lobster', cursive;
 font-size: 20px;
 }
 #daleytasks {
@@ -57,14 +55,19 @@ font-size: 20px;
   text-align: center;
 }
 
-#dateyear{
-  color: orange;
-  font-family: 'Lobster', cursive;
-  padding-left: 20px;
-  padding-right: 20px;
+#dateyear {
+  color: Orange;
+  font-family: Arial, serif;
+  font-weight: bold;
+  display: inline-block;
+  /*padding-left: 20px;
+  padding-right: 20px;*/
+
 }
+
 .well.controls {
 background-color: #333;
+border-color: orange;
 }
 
 div.row {
@@ -72,16 +75,22 @@ background-color: #333;
 }
 
 a.btn.btn-default {
-background-color: white;
-color: orange;
+background-color: orange;
+color: #333;
+padding-left: 10px;
+padding-right: 10px;
+border-radius: 8px;
+border-color: #333;
+border-width: 3px;
 }
 
 i.glyphicon.glyphicon-backward {
-color: orange;
+color: #333;
+
 }
 
 i.glyphicon.glyphicon-forward {
-color: orange;
+color: #333;
 }
 th {
 color: Orange;
@@ -93,11 +102,22 @@ td {
 background-color: #e0dfde;
 
 }
-
-div.col-md-12 {
-color: Black;
-font-size: 20px;
+a:link, a:visited {
+    color:Orange;
+    padding: 10px 20px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
 }
+
+a:hover, a:active {
+    background-color: orange;
+}
+
+#datehighlight {
+  background-color: pink;
+}
+
 
 a{
   background-color: black;
