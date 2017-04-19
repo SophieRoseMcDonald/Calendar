@@ -93,9 +93,10 @@ color: #333;
 i.glyphicon.glyphicon-forward {
 color: #333;
 }
+
 th {
 color: Orange;
-/*background-color: #333;*/
+background-color: #333;
 }
 
 td {
@@ -120,4 +121,20 @@ a:hover, a:active {
 
 td {
   background-color: #e0dfde;
+}
+
+#datetoday {
+  font-family: Arial, serif;
+  font-weight: bold;
+  margin-left: 1px;
+  margin-right: 5px;
+  text-align: center;
+  border-color: orange;
+  border-width: 1px;
+  border-style: double;
+  border-radius: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 10px;
 }
