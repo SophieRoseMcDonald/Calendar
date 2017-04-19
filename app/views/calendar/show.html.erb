@@ -11,21 +11,24 @@
       <i class="glyphicon glyphicon-forward"></i>
       <%= link_to "Add Event", new_event_path, class: "btn btn-default" %>
       <% end %>
-      
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-md-12">
-    <div class= "daylink">
+    <div class= "calendar", id="cal">
       <%= calendar @date do |date| %>
-      <%= link_to date.day, "#{events_path}/#{date}" %>
-      <div class = "higlight" id="datehiglight"><% if @events %>
-        <% @events.each do |event| %>
-      </div>
-      # highlight code here, helper method?
-      <% end %>
-      <% end %>
+        <%= link_to date.day, "#{events_path}/#{date}" %>
+        <% if @events %>
+          <div class = "highlight" id="datehighlight">
+            <ul id= "daylight">
+              <% @events.each do |event| %>
+                <li><%= event.name %> </li>
+              <% end %>
+            </ul>
+          </div>
+          # highlight code here, helper method?
+        <% end %>
       <% end %>
     </div>
   </div>
