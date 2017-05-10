@@ -1,5 +1,6 @@
 Feature: The calendar page
 
+  @javascript
   Scenario: A calendar with no events
     Given a user called "sophie@test.com" with a password of "password"
     And I log in
