@@ -19,16 +19,16 @@
     <div class= "calendar", id="cal">
       <%= calendar @date do |date| %>
         <%= link_to date.day, "#{events_path}/#{date}" %>
-          <div class = "highlight" id="datehighlight">
-              test
-              test1
-              <% if @events %>
-                <% @events.each do |event| %>
-                  <li><%= event.name %> </li>
-                <% end %>
-          </div>
-          # highlight code here, helper method?
+            <% if @events_by_date[date] %>
+              <ul>
+              <% @events_by_date[date].each do |event| %>
+                <li><%= link_to event.name, event %></li>
+              <% end %>
+              </ul>
+          <% end %>
+            <!-- <% Events.where(event_start_date: event_start_date..event_end_date).each do |event| %> -->
         <% end %>
+          <!-- #highlight code here, helper method? -->
       <% end %>
     </div>
   </div>
