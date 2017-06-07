@@ -4,7 +4,7 @@ module CalendarHelper
     Event.new(name: "test event")
   end
 
-  def events_for_day
-    Event.all #.where(:all)
+  def events_for_day(day)
+    Event.where(date_and_time: day)
   end
 end

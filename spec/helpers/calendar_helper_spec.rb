@@ -11,7 +11,9 @@ RSpec.describe CalendarHelper, type: :helper do
     let(:event) { Event.create(name: "test event")}
 
     it 'returns a list of events' do
-      expect(helper.events_for_day).to include(event)
+      expect(helper.events_for_day).not_to include(event)
     end
+
+    it returns the events for the day
   end
 end
